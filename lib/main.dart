@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_github/NavigatorPush.dart';
 
 
 void main() {
@@ -18,6 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
+      home: NavigatorPush(),
     );
   }
 }
