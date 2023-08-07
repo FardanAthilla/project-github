@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:project_github/ListView.dart';
 
 class NavigatorPush extends StatefulWidget {
   const NavigatorPush({Key? key});
@@ -20,6 +20,10 @@ class _NavigatorPush extends State<NavigatorPush> {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return ViewList();
+            }));
           },
           child: Text(
             'Masuk',
