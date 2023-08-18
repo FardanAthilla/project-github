@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_github/ListView.dart';
+import 'package:project_github/ListViewCategories.dart';
 
 class NavigatorPush extends StatefulWidget {
   const NavigatorPush({Key? key});
@@ -13,24 +13,20 @@ class _NavigatorPush extends State<NavigatorPush> {
   Widget build(BuildContext context) {
     return Scaffold(
        resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text('NavigatorPush'),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255), 
-      ),
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushReplacement(context,
+            Navigator.push(context,
                 MaterialPageRoute(builder: (context) {
               return ViewList();
             }));
           },
           child: Text(
-            'Masuk',
-            style: TextStyle(color: Colors.white),
+            'List Meals',
+            style: TextStyle(color: const Color.fromARGB(255, 206, 202, 202)),
           ),
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Color(0xFF263246)), // Atur warna tombol "Log Out"
+            backgroundColor: MaterialStateProperty.all(Color(0xFF263246)),
           ),
         ),
       ),
